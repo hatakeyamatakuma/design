@@ -1,26 +1,28 @@
-const test = $(".slider__text__left__link__arrow")
-      hoge = $(".slider__text__right__link")
+//使用する変数を定義
+const sliderArrow = $(".slider__text__left__link__arrow")
+      sliderLink = $(".slider__text__right__link")
+      navTitle = $(".nav__left__title__link")
       mainVisual = $(".main-visual__img__text__bottom__inner")
+      mainVisualImg = $(".main-visual__img__content__link")
+      mainVisualHashtag = $(".main-visual__img__text__hashtag__text")
       interview = $(".interview__text__bottom__inner")
+      interviewImg = $(".interview__img__link")
+      interviewLink = $(".interview__text__hashtag__link")
       contentView = $(".content__container__text__view__flex")
       contentlist = $(".content__container__contents__list__item__box__inner")
+      contentImg = $(".content__container__contents__list__item__link")
+      contentTitle = $(".content__container__contents__more__link")
+      contentHashtag = $(".content__container__contents__list__item__box__hashtag__link")
       subVisual = $(".sub-visual__img__content__middle__right__inner")
       lineUp = $(".line-up__text__view__arrow")
       lineUpitem = $(".line-up__content__list__item__inner")
-      comments = $(".comments__view__inner")
-      mainVisualImg = $(".main-visual__img__content__link")
-      interviewImg = $(".interview__img__link")
-      contentImg = $(".content__container__contents__list__item__link")
       lineUpImg = $(".line-up__content__list__link")
+      comments = $(".comments__view__inner")
       commentsImg = $(".comments__content__list__item__link")
-      contentTitle = $(".content__container__contents__more__link")
-      navTitle = $(".nav__left__title__link")
-      interviewLink = $(".interview__text__hashtag__link")
-      mainVisualHashtag = $(".main-visual__img__text__hashtag__text")
-      contentHashtag = $(".content__container__contents__list__item__box__hashtag__link")
       bottomView = $(".bottom-view__link")
 
 $(function(){
+  //ホバー時にクラス追加する関数
   function hoverAnimation(hoverContent){
     $(hoverContent).hover(
         function() {
@@ -31,9 +33,9 @@ $(function(){
         }
     )
   }
-
-  hoverAnimation(test)
-  hoverAnimation(hoge)
+  //ホバー時にクラス追加を実行
+  hoverAnimation(sliderArrow)
+  hoverAnimation(sliderLink)
   hoverAnimation(mainVisual)
   hoverAnimation(interview)
   hoverAnimation(contentView)
@@ -52,6 +54,7 @@ $(function(){
   hoverAnimation(contentHashtag)
   hoverAnimation(bottomView)
 
+  //main-visualのみホバー時に複数箇所にイベントが起きる。その関数
   function hoverAnimationMainvisual(hoverContent){
     $(hoverContent).hover(
         function() {
@@ -65,9 +68,11 @@ $(function(){
     )
   }
 
+  //ホバー時にクラス追加を実行
   hoverAnimationMainvisual(mainVisualImg)
   hoverAnimationMainvisual(mainVisualHashtag)
 
+  //トップ画面のスライドショーの処理
   $("#js-slide img:nth-child(n+2)").hide();
   setInterval(function() {
     $("#js-slide img:first-child").fadeOut(2000);
@@ -75,6 +80,7 @@ $(function(){
     $("#js-slide img:first-child").appendTo("#js-slide");
   }, 6000);
 
+  //line-upのスライドショー処理
   $("#line-up-slide img:nth-child(n+2)").hide();
   setInterval(function() {
     $("#line-up-slide img:first-child").fadeOut(1000);
@@ -84,6 +90,7 @@ $(function(){
     $(".line-up__content__list__link__dot__list:last-child").toggleClass("is-current");
   }, 5000);
 
+  //mainvisualまでスクロールしたらheader画面を表示する処理
   $(function() {
     const nav = $(".header");
     $(window).scroll(function () {
@@ -97,6 +104,7 @@ $(function(){
   });
   });
 
+  //mainvisualまでスクロールしたら画面右下のbottom-viewを表示する処理
   $(function() {
     const nav = $('.bottom-view');
     $(window).scroll(function () {
@@ -114,6 +122,7 @@ $(function(){
   });
   });
 
+  //一定の位置までスクロールしたらlogo画像を消す処理
   $(function() {
     const navTitle = $(".logo");
     $(window).scroll(function () {
@@ -127,6 +136,7 @@ $(function(){
   });
   });
 
+  //一定の位置までスクロールしたら表示されていなかったlogo画像に切り替える処理
   $(function() {
     const navTitle = $(".logo-opacity");
     $(window).scroll(function () {
@@ -142,6 +152,7 @@ $(function(){
   });
   });
 
+  //一定の位置までスクロールしたらheaderのbackground-colorを変えるクラスを追加する処理
   $(function() {
     const headerColor = $(".header");
     $(window).scroll(function () {
