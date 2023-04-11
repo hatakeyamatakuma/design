@@ -1,6 +1,7 @@
 //使用する変数を定義
 const sliderArrow = $(".slider__text__left__link__arrow")
       sliderLink = $(".slider__text__right__link")
+      sliderHamburger = $(".slider__hamburger__open")
       navTitle = $(".nav__left__title__link")
       mainVisual = $(".main-visual__img__text__bottom__inner")
       mainVisualImg = $(".main-visual__img__content__link")
@@ -8,6 +9,7 @@ const sliderArrow = $(".slider__text__left__link__arrow")
       interview = $(".interview__text__bottom__inner")
       interviewImg = $(".interview__img__link")
       interviewLink = $(".interview__text__hashtag__link")
+      interviewTextLink = $(".interview__text__link")
       contentView = $(".content__container__text__view__flex")
       contentlist = $(".content__container__contents__list__item__box__inner")
       contentImg = $(".content__container__contents__list__item__link")
@@ -36,8 +38,8 @@ $(function(){
   //ホバー時にクラス追加を実行
   hoverAnimation(sliderArrow)
   hoverAnimation(sliderLink)
+  hoverAnimation(sliderHamburger)
   hoverAnimation(mainVisual)
-  hoverAnimation(interview)
   hoverAnimation(contentView)
   hoverAnimation(contentlist)
   hoverAnimation(subVisual)
@@ -68,9 +70,253 @@ $(function(){
     )
   }
 
-  //ホバー時にクラス追加を実行
-  hoverAnimationMainvisual(mainVisualImg)
-  hoverAnimationMainvisual(mainVisualHashtag)
+    //ホバー時にクラス追加を実行
+    hoverAnimationMainvisual(mainVisualImg)
+    hoverAnimationMainvisual(mainVisualHashtag)
+
+  //interviewのホバー時の複数箇所のイベント発火
+  function hoverAnimaitonInterview(hoverContent){
+    $(hoverContent).hover(
+      function() {
+        $(interview).addClass("hover-animation");
+        $(interviewImg).addClass("hover-animation");
+      },
+      function() {
+        $(interview).removeClass("hover-animation");
+        $(interviewImg).removeClass("hover-animation");
+      }
+    )
+  }
+
+  hoverAnimaitonInterview(interview)
+  hoverAnimaitonInterview(interviewImg)
+  hoverAnimaitonInterview(interviewTextLink)
+
+  contentTitle.on("click", function(){
+    $(".hide-content").addClass("fadein")
+    $(".hide-content").slideDown();
+    $(".hide-content").fadeIn(1000);
+    $(".content__container__contents__more__link__title").hide();
+  })
+
+
+  const contentImg1 = $(".layout-1 .content__container__contents__list__item__link")
+        contentList1 = $(".layout-1 .content__container__contents__list__item__box__inner")
+        contentImg2 = $(".layout-2 .content__container__contents__list__item__link")
+        contentList2 = $(".layout-2 .content__container__contents__list__item__box__inner")
+        contentImg3 = $(".layout-3 .content__container__contents__list__item__link")
+        contentList3 = $(".layout-3 .content__container__contents__list__item__box__inner")
+        contentImg4 = $(".layout-4 .content__container__contents__list__item__link")
+        contentList4 = $(".layout-4 .content__container__contents__list__item__box__inner")
+        contentImg5 = $(".layout-5 .content__container__contents__list__item__link")
+        contentList5 = $(".layout-5 .content__container__contents__list__item__box__inner")
+        contentImg6 = $(".layout-6 .content__container__contents__list__item__link")
+        contentList6 = $(".layout-6 .content__container__contents__list__item__box__inner")
+        contentImg7 = $(".layout-7 .content__container__contents__list__item__link")
+        contentList7 = $(".layout-7 .content__container__contents__list__item__box__inner")
+        contentImg8 = $(".layout-8 .content__container__contents__list__item__link")
+        contentList8 = $(".layout-8 .content__container__contents__list__item__box__inner")
+        contentImg9 = $(".layout-9 .content__container__contents__list__item__link")
+        contentList9 = $(".layout-9 .content__container__contents__list__item__box__inner")
+        contentImg10 = $(".layout-10 .content__container__contents__list__item__link")
+        contentList10 = $(".layout-10 .content__container__contents__list__item__box__inner")
+        contentImg11 = $(".layout-11 .content__container__contents__list__item__link")
+        contentList11 = $(".layout-11 .content__container__contents__list__item__box__inner")
+        contentImg12 = $(".layout-12 .content__container__contents__list__item__link")
+        contentList12 = $(".layout-12 .content__container__contents__list__item__box__inner")
+
+
+  function hoverAnimationContent1(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg1).addClass("hover-animation")
+          $(contentList1).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg1).removeClass("hover-animation")
+          $(contentList1).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent1(contentImg1)
+  hoverAnimationContent1(contentList1)
+
+  function hoverAnimationContent2(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg2).addClass("hover-animation")
+          $(contentList2).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg2).removeClass("hover-animation")
+          $(contentList2).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent2(contentImg2)
+  hoverAnimationContent2(contentList2)
+
+  function hoverAnimationContent3(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg3).addClass("hover-animation")
+          $(contentList3).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg3).removeClass("hover-animation")
+          $(contentList3).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent3(contentImg3)
+  hoverAnimationContent3(contentList3)
+
+  function hoverAnimationContent4(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg4).addClass("hover-animation")
+          $(contentList4).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg4).removeClass("hover-animation")
+          $(contentList4).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent4(contentImg4)
+  hoverAnimationContent4(contentList4)
+
+  function hoverAnimationContent5(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg5).addClass("hover-animation")
+          $(contentList5).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg5).removeClass("hover-animation")
+          $(contentList5).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent5(contentImg5)
+  hoverAnimationContent5(contentList5)
+
+  function hoverAnimationContent6(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg6).addClass("hover-animation")
+          $(contentList6).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg6).removeClass("hover-animation")
+          $(contentList6).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent6(contentImg6)
+  hoverAnimationContent6(contentList6)
+
+  function hoverAnimationContent7(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg7).addClass("hover-animation")
+          $(contentList7).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg7).removeClass("hover-animation")
+          $(contentList7).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent7(contentImg7)
+  hoverAnimationContent7(contentList7)
+
+  function hoverAnimationContent8(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg8).addClass("hover-animation")
+          $(contentList8).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg8).removeClass("hover-animation")
+          $(contentList8).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent8(contentImg8)
+  hoverAnimationContent8(contentList8)
+
+  function hoverAnimationContent9(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg9).addClass("hover-animation")
+          $(contentList9).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg9).removeClass("hover-animation")
+          $(contentList9).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent9(contentImg9)
+  hoverAnimationContent9(contentList9)
+
+  function hoverAnimationContent10(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg10).addClass("hover-animation")
+          $(contentList10).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg10).removeClass("hover-animation")
+          $(contentList10).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent10(contentImg10)
+  hoverAnimationContent10(contentList10)
+
+  function hoverAnimationContent11(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg11).addClass("hover-animation")
+          $(contentList11).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg11).removeClass("hover-animation")
+          $(contentList11).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent11(contentImg11)
+  hoverAnimationContent11(contentList11)
+
+  function hoverAnimationContent12(hoverContent){
+    $(hoverContent).hover(
+        function() {
+          $(contentImg12).addClass("hover-animation")
+          $(contentList12).addClass("hover-animation")
+        },
+        function() {
+          $(contentImg12).removeClass("hover-animation")
+          $(contentList12).removeClass("hover-animation")
+        }
+    )
+  }
+
+  hoverAnimationContent12(contentImg12)
+  hoverAnimationContent12(contentList12)
 
   //トップ画面のスライドショーの処理
   $("#js-slide img:nth-child(n+2)").hide();
@@ -165,5 +411,18 @@ $(function(){
     }
   });
   });
+
+  $(function(){
+    $(window).scroll(function(){
+      $(".fadein").each(function(){
+        const position = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if(scroll > position - windowHeight + 200){
+          $(this).addClass("active");
+        }
+      })
+    })
+  })
 
 })
