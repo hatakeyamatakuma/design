@@ -3,6 +3,7 @@ const sliderArrow = $(".slider__text__left__link__arrow")
       sliderLink = $(".slider__text__right__link")
       sliderHamburger = $(".slider__hamburger__open")
       navTitle = $(".nav__left__title__link")
+      navHamburger = $(".nav__hamburger__link")
       mainVisual = $(".main-visual__img__text__bottom__inner")
       mainVisualImg = $(".main-visual__img__content__link")
       mainVisualHashtag = $(".main-visual__img__text__hashtag__text")
@@ -55,6 +56,7 @@ $(function(){
   hoverAnimation(interviewLink)
   hoverAnimation(contentHashtag)
   hoverAnimation(bottomView)
+  hoverAnimation(navHamburger)
 
   //main-visualのみホバー時に複数箇所にイベントが起きる。その関数
   function hoverAnimationMainvisual(hoverContent){
@@ -70,9 +72,9 @@ $(function(){
     )
   }
 
-    //ホバー時にクラス追加を実行
-    hoverAnimationMainvisual(mainVisualImg)
-    hoverAnimationMainvisual(mainVisualHashtag)
+  //ホバー時にクラス追加を実行
+  hoverAnimationMainvisual(mainVisualImg)
+  hoverAnimationMainvisual(mainVisualHashtag)
 
   //interviewのホバー時の複数箇所のイベント発火
   function hoverAnimaitonInterview(hoverContent){
